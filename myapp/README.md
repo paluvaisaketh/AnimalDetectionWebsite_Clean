@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Animal Detection Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The **Animal Detection Website** is a web application that utilizes machine learning to detect and recognize animals in images or videos. The system is designed to help monitor and prevent wildlife intrusion using AI-driven detection.
 
-## Available Scripts
+## Features
+- **User Authentication**: Secure login system for users.
+- **Animal Detection**: Uses YOLOv8 for real-time animal detection.
+- **Image & Video Upload**: Users can upload images or videos for analysis.
+- **Results Display**: Detected animals are highlighted with bounding boxes.
+- **Database Integration**: Stores user queries and detection results in MongoDB.
+- **Responsive UI**: Clean and easy-to-use frontend built with React.
 
-In the project directory, you can run:
+## Tech Stack
+### Frontend
+- React.js
+- TCSS
+- Axios (for API requests)
 
-### `npm start`
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Database)
+- Python (YOLOv8 for detection)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
+### Prerequisites
+Make sure you have the following installed:
+- Node.js
+- Python
+- MongoDB
+- Git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/paluvaisaketh/AnimalDetectionWebsite_Clean.git
+   cd AnimalDetectionWebsite_Clean
+   ```
+2. Set up the backend:
+   ```sh
+   cd backend
+   npm install
+   ```
+3. Configure environment variables:
+   - Create a `.env` file inside the `backend/` directory and add the required API keys and database credentials.
+   
+4. Start the backend server:
+   ```sh
+   node server.js
+   ```
+5. Set up the frontend:
+   ```sh
+   cd ../frontend
+   npm install
+   npm start
+   ```
 
-### `npm test`
+## Usage
+- Sign in using your credentials.
+- Upload an image or video containing animals.
+- The system will analyze and highlight detected animals.
+- View and manage past detections in your profile.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Environment Variables
+Make sure to define the following in your `.env` file:
+```plaintext
+MONGO_URI=<your_mongodb_connection_string>
+JWT_SECRET=<your_jwt_secret>
+TWILIO_API_KEY=<your_twilio_api_key>
+```
 
-### `npm run build`
+## Contributing
+Contributions are welcome! Feel free to submit a pull request or report issues.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
+This project is licensed under the MIT License.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Author
+[**Paluvai Bhargav Saketh**](https://github.com/paluvaisaketh)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
